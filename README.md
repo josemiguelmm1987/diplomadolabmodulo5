@@ -1,22 +1,26 @@
-# Iniciar entorno virtual
+## Iniciar entorno virtual
 
-> Mac/Linux:
+Mac/Linux:
 ```bash
 source venv/bin/activate
 ```
-> Windows:
+Windows:
 ```bash
 npm install
 ```
-> Ejecutar modo desarrollo
+Ejecutar modo desarrollo
 ```bash
 .\venv\Scripts\activate
 ```
-# Instalar dependencias
+## Instalar dependencias
 ```bash
 pip install -r requirements.txt
 ```
-# Ejecutar servidor de desarrollo
+## Crear superusuario
+```bash
+python manage.py createsuperuser
+```
+## Ejecutar servidor de desarrollo
 ```bash
 python manage.py runserver
 ```
