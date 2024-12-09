@@ -1,4 +1,5 @@
 from django.db import models
+from .validators import validar_par
 
 # Create your models here.
 class Categoria(models.Model):
@@ -14,7 +15,7 @@ class Producto(models.Model):
     nombre = models.CharField(max_length=100)
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
     descripcion = models.TextField()
-    precio = models.DecimalField(max_digits=10, decimal_places=2)
+    precio = models.DecimalField(max_digits=10, decimal_places=2, validators=[validar_par])
     stock = models.IntegerField()
     unidades = models.CharField(
         max_length=2,
